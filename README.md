@@ -1,4 +1,4 @@
-# Basic Concept
+# Welcome To CHIRPER
 Chirper is a microblogging web page like Twitter. You will be able to sign in to your account and add posts, comment and like!
 
 # User Stories
