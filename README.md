@@ -16,7 +16,7 @@ https://trello.com/b/bXhG7QzA/chirper-trello-board
 
 ## Chirper ERD
 
-![Chirper ERD](https://user-images.githubusercontent.com/84055237/162345131-b67e4c31-d68b-466d-843e-df8b1ec2004c.png)
+![Chirper ERD (1)](https://user-images.githubusercontent.com/84055237/162527557-71af8245-d9ae-4992-8eca-9c5c650b68df.png)
 
 
 -------------------------------------------------------------
