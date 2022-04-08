@@ -7,7 +7,8 @@ Chirper is a microblogging web page like Twitter. You will be able to sign in to
 3. AAU, I want to be able to comment on a post whenever I want.
 4. AAU, I want to be able to like a post or comment.
 
-
+## Trello Board
+https://trello.com/b/bXhG7QzA/chirper-trello-board
 
 ## Wire Frame
 
@@ -16,6 +17,10 @@ Chirper is a microblogging web page like Twitter. You will be able to sign in to
 ## Chirper ERD
 
 ![Chirper ERD](https://user-images.githubusercontent.com/84055237/162345131-b67e4c31-d68b-466d-843e-df8b1ec2004c.png)
+
+
+-------------------------------------------------------------
+
 
 
 This is your passport boilerplate.
@@ -32,7 +37,7 @@ This is your passport boilerplate.
 1. in the project root `git init`
 2. `git add .` to add all the starter code
 3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
+4. go to github and create your github and create a repo (Without a readme or license you can add that later!)
 5. copy the remote address
 6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
 7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
