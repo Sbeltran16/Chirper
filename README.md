@@ -1,3 +1,13 @@
+# Basic Concept
+Chirper is a microblogging web page like Twitter. You will be able to sign in to your account and add posts, comment and like!
+
+# User Stories
+1. AAU, I want to be able to log in to my account
+2. AAU, I want to be able to create posts, as well as delete them whenever I want.
+3. AAU, I want to be able to comment on a post whenever I want.
+4. AAU, I want to be able to like a post or comment.
+
+
 
 ## Wire Frame
 
