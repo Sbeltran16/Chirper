@@ -1,7 +1,7 @@
 # passport-boilerplate
 1. Wire Frame
     <img width="749" alt="Screen Shot 2022-04-07 at 5 33 23 PM" src="https://user-images.githubusercontent.com/84055237/162341590-d66493fb-d21e-43c4-b7ef-fa3282f3afbd.png">
-2. Chirpir ERD
+2. Chirper ERD
     ![Chirper ERD](https://user-images.githubusercontent.com/84055237/162341773-10eddf71-1f34-479b-8d8b-7c92c27fa391.jpeg)
 
 This is your passport boilerplate.
