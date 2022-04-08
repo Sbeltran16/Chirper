@@ -1,5 +1,8 @@
 # passport-boilerplate
-
+1. Wire Frame
+    <img src="Wireframe.png">
+2. Chirpir ERD
+    <img src="ERD.jpeg">
 
 This is your passport boilerplate.
 
