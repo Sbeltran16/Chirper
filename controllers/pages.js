@@ -19,7 +19,7 @@ function create(req, res){
     const post = new Page(req.body);
     post.save(function(err){
         if (err) return res.render('pages/new',{title: "Create Post"});
-        res.redirect(`/Chirper/FrontPage`);
+        res.redirect(`/Chirper/home`);
     })
 }
 
