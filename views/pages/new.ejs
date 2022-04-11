@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
     <title>Document</title>
 </head>
 <body>
-    <h2 id="createPost">Create a post</h2>
+    <h1 id="createPost">Create a post</h2>
 
     <form id="form-for-post" method="POST" action="/Chirper">
-        <label>What Is On Your Mind?</label>
-        <textarea name ="content"></textarea>
-        <input type="submit" value="Create Post">
+        <label id='postLabel'>What Is On Your Mind?</label>
+        <textarea name ="content" id="content"></textarea>
+        <input id="createPostButton" type="submit" value="Create Post">
 </body>
 </html>
