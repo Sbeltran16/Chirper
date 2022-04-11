@@ -10,7 +10,7 @@ function index(req, res) {
     Page.find({}, function(err, posts){
         res.render("pages/index", {
             posts,
-            title: 'Front Page'
+            title: "Chirper | Home"
         })
     })
 }
