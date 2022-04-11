@@ -7,12 +7,19 @@ function newPage(req, res){
 
 
 function index(req, res) {
-    console.log(req.user, '<-- req.user')
     Page.find({}, function(err, posts){
         res.render("pages/index", {
             posts,
             title: 'Front Page'
         })
+    })
+}
+
+function create(req, res){
+    const post = new Page(req.body);
+    post.save(function(err){
+        if (err) return res.render('pages/new',{title: "Create Post"});
+        res.redirect(`/Chirper/FrontPage`);
     })
 }
 
@@ -31,5 +38,6 @@ function index(req, res) {
 
 module.exports = {
     new: newPage,
-    index
+    index,
+    create
 }
