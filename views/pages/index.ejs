@@ -14,6 +14,7 @@
         <% posts.forEach(function(p){ %>
             <div>
             <%= p.userText %>
+            <a href="/Chirper/<%= p._id %>">View Post</a>
             </div>
         <% }); %>  
 <% } else { %>
