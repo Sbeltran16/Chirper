@@ -1,5 +1,13 @@
 const Page = require("../models/page");
-const User = require("../models/user")
+const User = require("../models/user");
+
+module.exports = {
+    new: newPage,
+    index,
+    create,
+    show
+}
+
 
 function newPage(req, res){
     res.render("pages/new", {title: "Create Post"})
@@ -30,14 +38,4 @@ function show(req, res){
             title: 'Chirper | Posts'
         })
     })
-}
-
-
-
-
-module.exports = {
-    new: newPage,
-    index,
-    create,
-    show
 }
