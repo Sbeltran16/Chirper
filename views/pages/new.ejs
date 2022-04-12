@@ -13,11 +13,11 @@
         <a href="/Chirper/create" <%- title === 'Chirper | Create a Post' ? 'class="active"' : '' %>>Create Chirp</a>
     </nav>
     <h1 class="chirperHeader">Chirper</h1>
-    <h2 id="createPost">Create a Post</h2>
+    <h2 class="headerTwo">Create a Chirp</h2>
 
-    <form id="form-for-post" method="POST" action="/Chirper">
+    <form class="form-for-post" method="POST" action="/Chirper">
         <textarea name ="userText" id="content"  rows="5" cols="40" placeholder="What is on your Mind?"></textarea>
-        <input id="createPostButton" type="submit" value="Chirp!">
+        <input class="postButton" type="submit" value="Chirp!">
     </form>
 </body>
 </html>

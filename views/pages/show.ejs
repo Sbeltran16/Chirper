@@ -18,10 +18,10 @@
         <div><%= posts.userText %></div>
     </section>
 
-    <div>Add A Comment</div>
-    <form id="commentForm" action="/Chirper/<%= posts._id %>/post" method="POST">
-        <textarea name="userComment" placeholder="Add a Comment"></textarea>
-        <input type="submit" value="Add Comment">
+    <h2 class="headerTwo">Add A Comment</h2>
+    <form class="form-for-post" action="/Chirper/<%= posts._id %>/post" method="POST">
+        <textarea id="commentForm" name="userComment" rows="5" cols="40" placeholder="Add a Comment"></textarea>
+        <input  class="postButton" type="submit" value="Add Comment">
     </form>
 
         
