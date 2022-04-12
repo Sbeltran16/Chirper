@@ -8,7 +8,12 @@
     <title>Chirper | Create a Post</title>
 </head>
 <body>
-    <h1 id="createPost">Create a Post</h1>
+    <nav class="navBar">
+        <a href="/Chirper/home" <%- title === 'Chirper | Home' ? 'class="active"' : '' %>>Home</a> 
+        <a href="/Chirper/create" <%- title === 'Chirper | Create a Post' ? 'class="active"' : '' %>>Create Chirp</a>
+    </nav>
+    <h1 class="chirperHeader">Chirper</h1>
+    <h2 id="createPost">Create a Post</h2>
 
     <form id="form-for-post" method="POST" action="/Chirper">
         <textarea name ="userText" id="content"  rows="5" cols="40" placeholder="What is on your Mind?"></textarea>
