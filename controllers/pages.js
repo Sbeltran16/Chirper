@@ -1,5 +1,6 @@
 const Page = require("../models/page");
 const User = require("../models/user");
+const Comment = require("../models/comment");
 
 module.exports = {
     new: newPage,
@@ -33,9 +34,12 @@ function create(req, res){
 
 function show(req, res){
     Page.findById(req.params.id, function(err, posts){
-        res.render('pages/show', {
-            posts,
-            title: 'Chirper | Posts'
+        Comment.find({userComment: posts._id},function (err, comments){
+            res.render('pages/show', {
+                posts,
+                comments,
+                title: 'Comments'    
+            })  
         })
     })
 }

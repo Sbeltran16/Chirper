@@ -19,6 +19,7 @@ require('./config/database');
 require('./config/passport');
 const pagesRouter = require('./routes/pages');
 const indexRouter = require('./routes/index');
+const commentsRouter = require('./routes/comments')
 
 
 
@@ -61,6 +62,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/Chirper', pagesRouter);
 app.use('/', indexRouter);
+app.use('/', commentsRouter);
 
 
 // invalid request, send 404 page
