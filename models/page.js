@@ -10,7 +10,7 @@ const commentSchema = new Schema({
 
 const postSchema = new Schema({
     userId: Schema.Types.ObjectId,
-    userText: String,
+    userText: {type: String, required: true},
     comment: [commentSchema]
 
 })

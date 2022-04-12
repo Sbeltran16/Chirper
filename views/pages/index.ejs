@@ -12,9 +12,9 @@
 <% if(posts.length) { %>
     <% let total = 0 %>
         <% posts.forEach(function(p){ %>
-            <div>
+            <div id="userContent">
             <%= p.userText %>
-            <a href="/Chirper/<%= p._id %>">View Post</a>
+            <a href="/Chirper/<%= p._id %>/post">View Post</a>
             </div>
         <% }); %>  
 <% } else { %>

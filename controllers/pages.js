@@ -23,15 +23,14 @@ function create(req, res){
     })
 }
 
-
-
-
-
-
-
-
-
-
+function show(req, res){
+    Page.findById(req.params.id, function(err, posts){
+        res.render('pages/show', {
+            posts,
+            title: 'Chirper | Posts'
+        })
+    })
+}
 
 
 
@@ -39,5 +38,6 @@ function create(req, res){
 module.exports = {
     new: newPage,
     index,
-    create
+    create,
+    show
 }
