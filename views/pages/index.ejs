@@ -8,6 +8,10 @@
     <title>Chirper | Home</title>
 </head>
 <body>
+    <nav class="navBar">
+        <a href="/Chirper/home" <%- title === 'Chirper | Home' ? 'class="active"' : '' %>>Home</a> 
+        <a href="/Chirper/create" <%- title === 'Chirper | Create a Post' ? 'class="active"' : '' %>>Create Chirp</a>
+    </nav>
 <h1 class="chirperHeader">Chirper</h1>
 <% if(posts.length) { %>
     <% let total = 0 %>

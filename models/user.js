@@ -3,8 +3,6 @@ const Schema = mongoose.Schema;
 
 // Create your User Model
 
-
-
 const emailSchema = new Schema({
     email:{
         type: String,
