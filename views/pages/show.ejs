@@ -21,9 +21,9 @@
     <h1 class="chirperHeader">Chirper</h1>
     <section class="userContent">
         <div><%= posts.userText %></div>
-        <% if (user.equals(user)) { %>
+        <% if (user) { %>
             <form action="/Chirper/<%= posts._id %>?_method=DELETE" method="POST">
-              <button type="submit">Delete Chirp</button>
+              <button class="deleteBtn" type="submit">Delete Chirp</button>
             </form>
           <% } %>
     </section>
@@ -35,12 +35,15 @@
             <input class="postButton" type="submit" value="Add Comment">
         </form>
     <% } %> 
-        
-    <% comments.forEach(function(c){ %>
-        <div id="userComment">
-        <%= c.userComment %>
-        </div>
-    <% }); %>  
-    
+        <% if(comments.length) { %>
+        <% let total = 0 %>
+            <% comments.forEach(function(c){ %>
+                <div id="userComment">
+                <%= c.userComment %>
+                </div>
+        <% }); %> 
+        <% } else { %>
+            <h5 class="noPosts">No Comments Yet</h5>
+        <% } %> 
 </body>
 </html>

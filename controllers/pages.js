@@ -46,8 +46,7 @@ function show(req, res){
 }
 
 function deletePost(req, res) {
-    Page.findOneAndDelete(
-      {_id: req.params.id, userRecommending: req.user}, function(err) {
+    Page.findOneAndDelete(req.body.id, function(err) {
         res.redirect('/Chirper/home');
       }
     );
