@@ -9,8 +9,13 @@
 </head>
 <body>
     <nav class="navBar">
-        <a href="/Chirper/home" <%- title === 'Chirper | Home' ? 'class="active"' : '' %>>Home</a> 
-        <a href="/Chirper/create" <%- title === 'Chirper | Create a Post' ? 'class="active"' : '' %>>Create Chirp</a>
+        <% if (user) { %> 
+            <a href="/Chirper/home" <%- title === 'Chirper | Home' ? 'class="active"' : '' %>>Home</a> 
+            <a href="/Chirper/create" <%- title === 'Chirper | Create a Post' ? 'class="active"' : '' %>>Create Chirp</a>
+            <a href="/logout">Log Out</a>
+        <% } else { %>
+            <a href="/auth/google" class="login">Log In</a>
+        <% } %> 
     </nav>
     <h1 class="chirperHeader">Chirper</h1>
     <h2 class="headerTwo">Create a Chirp</h2>

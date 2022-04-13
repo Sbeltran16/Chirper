@@ -3,24 +3,18 @@ const Schema = mongoose.Schema;
 
 // Create your User Model
 
-const emailSchema = new Schema({
-    email:{
-        type: String,
-        lowercase: true,
-        unique: true,
-        required: 'Email address is required',
-    }
-})
+const userSchema = new mongoose.Schema({
+	name: String,
+	googleId: {
+	  type: String,
+	  required: true
+	},
+	email: String,
+	avatar: String
+  }, {
+	timestamps: true
+  });
 
-const userSchema = new Schema({
-    userId: Schema.Types.ObjectId,
-    userName: String,
-    email : [emailSchema],
-    password: {
-        type: String,
-        required: true
-    }
-})
 
 
 module.exports = mongoose.model('User', userSchema);
