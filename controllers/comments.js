@@ -1,22 +1,20 @@
 const Page = require("../models/page");
-const User = require("../models/user");
-const Comment = require("../models/comment");
 
 module.exports = {
-    new: newComment,
     create
-    
 }
 
-
-function newComment(req, res){
-    res.render('comments/new',{title: 'Chirper | Comment'})
-}
 
 function create(req, res){
-    const comment = new Comment(req.body);
-    comment.save(function(err){
-        if (err) return res.render('pages/show',{title: "Chirper | Posts "});
-        res.redirect(`/Chirper/:id/post`);
-    })
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+
+	Page.findById(req.params.id, function(err, posts) {
+		posts.comment.push(req.body); 
+		posts.save(function(err){
+			console.log(posts)
+			res.redirect(`/Chirper/${posts._id}/post`)	
+		})
+	})
 }

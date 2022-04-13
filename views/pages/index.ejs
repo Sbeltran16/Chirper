@@ -13,6 +13,7 @@
             <a href="/Chirper/home" <%- title === 'Chirper | Home' ? 'class="active"' : '' %>>Home</a> 
             <a href="/Chirper/create" <%- title === 'Chirper | Create a Post' ? 'class="active"' : '' %>>Create Chirp</a>
             <a href="/logout">Log Out</a>
+            <label>Welcome! <% user %> </label>
         <% } else { %>
             <a href="/auth/google" class="login">Log In</a>
         <% } %> 

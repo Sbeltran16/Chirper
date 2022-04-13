@@ -1,12 +1,13 @@
 const Page = require("../models/page");
 const User = require("../models/user");
-const Comment = require("../models/comment");
+
 
 module.exports = {
     new: newPage,
     index,
     create,
-    show
+    show,
+    delete: deletePost,
 }
 
 
@@ -34,12 +35,20 @@ function create(req, res){
 
 function show(req, res){
     Page.findById(req.params.id, function(err, posts){
-        Comment.find({userComment: posts._id},function (err, comments){
+        Page.find({comment: posts._id},function (err, comments){
             res.render('pages/show', {
                 posts,
                 comments,
-                title: 'Comments'    
+                title: 'Chirper | Posts'
             })  
         })
     })
 }
+
+function deletePost(req, res) {
+    Page.findOneAndDelete(
+      {_id: req.params.id, userRecommending: req.user}, function(err) {
+        res.redirect('/Chirper/home');
+      }
+    );
+  }

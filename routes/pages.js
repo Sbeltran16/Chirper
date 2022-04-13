@@ -6,7 +6,7 @@ router.get('/create', pagesCtrl.new);
 router.get('/home', pagesCtrl.index);
 router.post('/', pagesCtrl.create);
 router.get('/:id/post', pagesCtrl.show);
-
+router.delete('/:id', pagesCtrl.delete);
 
 module.exports = router;
 
