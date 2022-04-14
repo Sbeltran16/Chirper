@@ -2,7 +2,7 @@ const passport = require('passport');
 const UserInfoError = require('passport-google-oauth20/lib/errors/userinfoerror');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require('../models/user')
-//Require your User Model here!
+
 
 // configuring Passport!
 passport.use(new GoogleStrategy({
@@ -37,8 +37,8 @@ passport.serializeUser(function(user, cb) {
 passport.deserializeUser(function(userId, cb) {
   User.findById(userId, function(err, user){
 		if(err) return cb(err);
-		cb(null, user); // <- this assings the user document we just found to the request object
-		// req.user
+		cb(null, user);
+		
 	})
   // Find your User, using your model, and then call done(err, whateverYourUserIsCalled)
   // When you call this done function passport assigns the user document to req.user, which will 
