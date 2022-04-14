@@ -11,6 +11,7 @@
             <form action="/Chirper/<%= posts._id %>?_method=DELETE" method="POST">
               <button class="postButton" type="submit">Delete Chirp</button>
             </form>
+            <a href="/Chirper/<%= posts._id %>/edit">Edit Chirp</a>
           <% } %>
     </section>
 
@@ -26,6 +27,7 @@
             <% comments.forEach(function(c){ %>
                 <div id="userComment">
                 <%= c.userComment %>
+                <%= c.createdAt %> 
                 </div>
         <% }); %> 
         <% } else { %>

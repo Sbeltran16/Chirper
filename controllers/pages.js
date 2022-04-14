@@ -8,6 +8,7 @@ module.exports = {
     create,
     show,
     delete: deletePost,
+    edit
 }
 
 
@@ -51,3 +52,10 @@ function deletePost(req, res) {
       }
     );
   }
+
+function edit(req, res) {
+    Page.findOne({_id: req.params.id, userRecommending: req.user._id},function(err, post) {
+        if (err || !post) return res.redirect('/Chirper/home');
+        res.render('pages/edit', {post});
+    });
+}

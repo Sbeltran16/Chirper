@@ -51,7 +51,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: white;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  border: solid lightseagreen;
+  border: solid block;
   justify-content: center;
 }
 
@@ -81,7 +81,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 60px;
   justify-content: center;
-  border: solid lightseagreen 1px;
+  border-style: outset;
   padding: 10px;
   margin: 30px 400px 30px 400px;
   background-color:white;
@@ -92,7 +92,7 @@ body {
   overflow: hidden;
   background-color: white;
   opacity: 0.9;
-  border: solid black;
+  border-style: outset;
   position: fixed;
   top: 0;
   left:0;
@@ -105,9 +105,9 @@ body {
   display: block;
   color: black;
   text-align: center;
-  padding:10px 16px;
+  padding:0px 19px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
   0px 8px 13px rgba(0,0,0,0.1),
   0px 18px 23px rgba(0,0,0,0.1);
@@ -145,6 +145,7 @@ a {
   font-weight: lighter;
   text-align: center;
   font-size: 60px;
+  margin: auto;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
   0px 8px 13px rgba(0,0,0,0.1),
   0px 18px 23px rgba(0,0,0,0.1);
@@ -159,7 +160,7 @@ a {
 .chirperLogo {
   height: 45px;
   float: right;
-  margin-right: 610px;
+  margin-right: 615px;
 }
 
 
