@@ -7,8 +7,7 @@ module.exports = {
     index,
     create,
     show,
-    delete: deletePost,
-    edit
+    delete: deletePost
 }
 
 
@@ -29,7 +28,7 @@ function index(req, res) {
 function create(req, res){
     const post = new Page(req.body);
     post.save(function(err){
-        if (err) return res.render('pages/new',{title: "Create Post"});
+        if (err) return res.render('pages/new',{title: "Chirper | Create a Post"});
         res.redirect(`/Chirper/home`);
     })
 }
@@ -40,7 +39,7 @@ function show(req, res){
             res.render('pages/show', {
                 posts,
                 comments,
-                title: 'Chirper | Posts'
+                title: `Chirper | Post`
             })  
         })
     })
@@ -53,9 +52,3 @@ function deletePost(req, res) {
     );
   }
 
-function edit(req, res) {
-    Page.findOne(req.params.id, function(err, post) {
-        if (err || !post) return res.redirect('/Chirper/home');
-        res.render('pages/edit', {post});
-    });
-}

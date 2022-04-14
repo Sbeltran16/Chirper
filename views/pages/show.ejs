@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-    <h1 class="chirperHeader">Chirper</h1>
+    <h1 class="chirperHeader">Post</h1>
     <section class="userContent">
         <div>
             <%= posts.userText %><br><br>
@@ -11,27 +11,25 @@
             <form action="/Chirper/<%= posts._id %>?_method=DELETE" method="POST">
               <button class="postButton" type="submit">Delete Chirp</button>
             </form>
-            <a href="/Chirper/<%= posts._id %>/edit">Edit Chirp</a>
           <% } %>
     </section>
 
     <% if(user) { %>
         <h2 class="headerTwo">Add A Comment</h2>
         <form class="form-for-post"  method="POST" action="/Chirper/<%= posts._id %>/post">
-            <textarea id="commentForm" name="userComment" rows="5" cols="40" placeholder="Add a Comment"></textarea>
-            <input class="postButton" type="submit" value="Add Comment">
+            <textarea id="commentForm" name="comment" rows="5" cols="40" placeholder="Add a Comment"></textarea>
+            <button class="postButton" type="submit">Add comment</button> 
         </form>
     <% } %> 
-        <% if(comments.length) { %>
-        <% let total = 0 %>
+    <% if(comments.length) { %>
             <% comments.forEach(function(c){ %>
                 <div id="userComment">
-                <%= c.userComment %>
+                <%= c.comment %>
                 <%= c.createdAt %> 
                 </div>
-        <% }); %> 
-        <% } else { %>
-            <h5 class="noPosts">No Comments Yet</h5>
-        <% } %> 
+        <% }); %>
+    <% } else { %>
+        <h5 class="noPosts">No Comments Yet</h5>
+    <% } %> 
 </body>
 </html>
