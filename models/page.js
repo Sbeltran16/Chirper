@@ -4,16 +4,19 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
     userId: Schema.Types.ObjectId,
-    userText: String
-})
+    userText: String,
+}, {
+    timestamps: true
+});
 
 
 const postSchema = new Schema({
     userId: Schema.Types.ObjectId,
     userText: {type: String, required: true},
-    comment: [commentSchema]
-
-})
+    comment: [commentSchema],
+}, {
+    timestamps: true
+});
 
 
 module.exports = mongoose.model('Post', postSchema);
