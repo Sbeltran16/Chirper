@@ -47,14 +47,14 @@ function show(req, res){
 }
 
 function deletePost(req, res) {
-    Page.findOneAndDelete(req.body.id, function(err) {
+    Page.findOneAndDelete(req.params.id, function(err) {
         res.redirect('/Chirper/home');
       }
     );
   }
 
 function edit(req, res) {
-    Page.findOne({_id: req.params.id, userRecommending: req.user._id},function(err, post) {
+    Page.findOne(req.params.id, function(err, post) {
         if (err || !post) return res.redirect('/Chirper/home');
         res.render('pages/edit', {post});
     });
