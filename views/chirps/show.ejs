@@ -11,9 +11,7 @@
             <form action="/Chirper/<%= chirp._id %>?_method=DELETE" method="POST">
               <button class="postButton" type="submit">Delete Chirp</button>
             </form>
-            <form action="/Chirper/<%= chirp._id %>" method="PUT">
-                <button class="postButton" type="submit">Edit Chirp</button>>
-            </form>
+            <button class="postButton"><a href='/Chirper/chirps/<%= chirp._id %>/edit'> Edit Chirp</a></button>            
           <% } %>
     </section>
 

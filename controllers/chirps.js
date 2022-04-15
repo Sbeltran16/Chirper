@@ -32,9 +32,29 @@ function show(req, res){
 }
 
 function deleteChirp(req, res) {
+    // DELETE FIRST BY CHIRP ID
     Chirp.findByIdAndDelete(req.params.id, function(err){
         res.redirect('/Chirper/home')
     })
+}
+
+function edit(req, res) {
+    Chirp.findById(req.params.id, function(err, chirp){
+        res.render('chirps/edit', {
+            chirp,
+            title: 'Chiper | Edit'
+        })
+    })
+}
+
+function update(req, res) {
+    Chirp.findByIdAndUpdate(req.params.id, req.body, function(err, chirp){
+        // res.render('chirps/show', {
+        //     chirp,
+        //     title: 'Chirper | Chirp'
+        // })
+    })
+    res.redirect(`/Chirper/home`)
 }
 
 module.exports = {
@@ -42,7 +62,9 @@ module.exports = {
     index,
     create,
     show,
-    delete: deleteChirp
+    edit,
+    delete: deleteChirp,
+    update
 }
 
 

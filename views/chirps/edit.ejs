@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<h1 class="chirperHeader">Chirper</h1>
+<h2 class="headerTwo">Edit a Chirp</h2>
+
+<form class="form-for-post" method="POST" action="/Chirper/chirps/<%= chirp._id %>?_method=PUT">
+    <textarea name ="chirpText" id="content"  rows="5" cols="40" maxlength= "200"><%= chirp.chirpText %></textarea>
+    <input class="postButton" type="submit" value="Chirp!">
+</form>
+</body>
+</html>
