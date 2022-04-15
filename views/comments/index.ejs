@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+
+<h1 class="chirperHeader">Chirper</h1></br>
+
+<% if(user) { %>
+    <h2 class="headerTwo">Add A Comment</h2>
+    <form class="form-for-post"  method="POST" action="/Chirper/chirps/<%= chirp._id %>/comments">
+        <textarea id="commentForm" name="comment" rows="5" cols="40" placeholder="Add a Comment"></textarea>
+        <button class="postButton" type="submit">Add comment</button> 
+    </form>
+<% } %>
+
+<% if(comments.length) { %>
+        <% comments.forEach(function(c){ %>
+            <div class="userContent"> 
+            <%= c.commentText %></br></br></br>
+            <%= c.createdAt %>
+            </div>
+        <% }); %> 
+<% } else { %>
+    <h5 class="noPosts">No Comments Yet</h5>
+<% } %> 
+    
+</body>
+</html>

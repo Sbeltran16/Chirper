@@ -1,5 +1,4 @@
 <%- include('../partials/header') %>
-
     <h1 class="chirperHeader">Post</h1>
     <section class="userContent">
         <div>
@@ -15,13 +14,8 @@
           <% } %>
     </section>
 
-    <% if(user) { %>
-        <h2 class="headerTwo">Add A Comment</h2>
-        <form class="form-for-post"  method="POST" action="/Chirper/<%= chirp._id %>/post">
-            <textarea id="commentForm" name="comment" rows="5" cols="40" placeholder="Add a Comment"></textarea>
-            <button class="postButton" type="submit">Add comment</button> 
-        </form>
-    <% } %> 
+    <button class="postButton"><a href="/Chirper/chirps/<%= chirp._id %>/comments">View Comments</a></button>
+
 
 </body>
 </html>
