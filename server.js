@@ -17,7 +17,7 @@ const app = express();
 require('./config/database');
 // configure Passport
 require('./config/passport');
-const pagesRouter = require('./routes/pages');
+const chirpRouter = require('./routes/chirps');
 const indexRouter = require('./routes/index');
 const commentsRouter = require('./routes/comments')
 
@@ -60,7 +60,7 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
-app.use('/Chirper', pagesRouter);
+app.use('/Chirper', chirpRouter);
 app.use('/', indexRouter);
 app.use('/', commentsRouter);
 

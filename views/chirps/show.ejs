@@ -3,33 +3,27 @@
     <h1 class="chirperHeader">Post</h1>
     <section class="userContent">
         <div>
-            <%= posts.userText %><br><br>
-            <%= posts.createdAt%>
+            <%= chirp.chirpText %><br><br>
+            <%= chirp.createdAt%>
         </div>
 
         <% if (user) { %>
-            <form action="/Chirper/<%= posts._id %>?_method=DELETE" method="POST">
+            <form action="/Chirper/<%= chirp._id %>?_method=DELETE" method="POST">
               <button class="postButton" type="submit">Delete Chirp</button>
+            </form>
+            <form action="/Chirper/<%= chirp._id %>" method="PUT">
+                <button class="postButton" type="submit">Edit Chirp</button>>
             </form>
           <% } %>
     </section>
 
     <% if(user) { %>
         <h2 class="headerTwo">Add A Comment</h2>
-        <form class="form-for-post"  method="POST" action="/Chirper/<%= posts._id %>/post">
+        <form class="form-for-post"  method="POST" action="/Chirper/<%= chirp._id %>/post">
             <textarea id="commentForm" name="comment" rows="5" cols="40" placeholder="Add a Comment"></textarea>
             <button class="postButton" type="submit">Add comment</button> 
         </form>
     <% } %> 
-    <% if(comments.length) { %>
-            <% comments.forEach(function(c){ %>
-                <div id="userComment">
-                <%= c.comment %>
-                <%= c.createdAt %> 
-                </div>
-        <% }); %>
-    <% } else { %>
-        <h5 class="noPosts">No Comments Yet</h5>
-    <% } %> 
+
 </body>
 </html>
