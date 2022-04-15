@@ -46,9 +46,9 @@ function show(req, res){
 }
 
 function deletePost(req, res) {
-    Page.findOneAndDelete(req.params.id, function(err) {
-        res.redirect('/Chirper/home');
-      }
-    );
-  }
+    Page.findOneAndDelete(req.params.id, function(err){
+        res.redirect('/Chirper/home')
+    })
+}
+
 

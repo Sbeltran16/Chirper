@@ -7,7 +7,7 @@
             <%= posts.createdAt%>
         </div>
 
-        <% if (user && user._id.equals(posts.user)) { %>
+        <% if (user) { %>
             <form action="/Chirper/<%= posts._id %>?_method=DELETE" method="POST">
               <button class="postButton" type="submit">Delete Chirp</button>
             </form>
