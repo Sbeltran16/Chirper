@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<h1 class="chirperHeader">Chirper</h1></br>
+
+<% if(comments.length) { %>
+    <% comments.forEach(function(c){ %>
+        <div class="userContent"> 
+        <%= c.commentText %></br></br></br>
+        <%= c.createdAt %>
+        </div>
+    <% }); %> 
+<% } else { %>
+<h5 class="noPosts">No Comments Yet</h5>
+<% } %> 
+
+</body>
+</html>

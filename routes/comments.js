@@ -4,7 +4,8 @@ const commentsController = require('../controllers/comments');
 
 // router.post('/Chirper/chirps/:id/comments', commentsController.create);
 router.get('/Chirper/chirps/:id/comments', commentsController.index);
-router.post('Chirper/chirps/:id/comments', commentsController.create);
+router.post('/Chirper/chirps/:id/comments', commentsController.create);
+router.get('/Chirper/chirps/:id/comments/show', commentsController.show);
 
 
 module.exports = router;
