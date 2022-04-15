@@ -21,13 +21,11 @@ function newComment(req, res){
 }
 
 function create(req, res){
-    const commentData = req.body
-    commentData.chirpId = req.params.id
-    const comment = new Comment(commentData)
+    const comment = new Comment(req.body)
     console.log(comment)
     comment.save(function(err){
         if(err) return res.render('comments/new', {title: "Chirper | Create a Comment"});
-        res.redirect('/Chirper/chirp/:id/comments/show');
+        res.redirect(`/Chirper/chirp/${req.params.id}/comments/show`);
     })
 }
 
