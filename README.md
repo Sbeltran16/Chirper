@@ -36,7 +36,8 @@ https://trello.com/b/bXhG7QzA/chirper-trello-board
  4. HTML
  5. MongoDB
  6. Heroku
- 7. Google Cloud Oauth
+ 7. Express
+ 9. Google Cloud Oauth
 
 
 ## Next Steps
