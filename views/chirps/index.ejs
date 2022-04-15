@@ -6,7 +6,7 @@
         <% chirps.forEach(function(c){ %>
             <div class="userContent"> 
             <%= c.chirpText %></br></br></br>
-            <%= c.createdAt %>
+            <%= c.updatedAt %>
             <a href="/Chirper/chirp/<%= c._id %>">View Chirp</a>
             </div>
         <% }); %> 

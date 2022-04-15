@@ -27,16 +27,14 @@ function create(req, res){
     console.log(comment)
     comment.save(function(err){
         if(err) return res.render('comments/new', {title: "Chirper | Create a Comment"});
-        res.redirect(`/Chirper/chirp/${req.params.id}`);
+        res.redirect('/Chirper/chirp/:id/comments/show');
     })
 }
 
 function show(req, res){
     Comment.findById(req.params.id, function(err, comments){
-        const chirp = Chirp.findById(req.params.id)
         res.render('comments/show', {
             comments,
-            chirp,
             title: 'Chirper | View Comments'
         })
     })
